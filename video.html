@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hover Video</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .video-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .video-item {
+        flex: 1 1 300px;
+      }
+
+      .video {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body class="bg-emerald-400 p-3">
+    <div class="container">
+      <div class="video-list">
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid2.MP4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid3.MP4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid4.MP4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid5.MP4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid6.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid7.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid8.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid10.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid11.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid12.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-item">
+          <video class="video" loop muted>
+            <source src="vids/vid13.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <!-- Add more video items as needed -->
+      </div>
+    </div>
+    <a href="thankyou.html" class="bg-blue-600 rounded-xl p-2 m-3 flex items-center justify center">
+        Press to continue..
+    </a>
+    
+    <a href="notea.html" class="bg-blue-600 rounded-xl p-2 m-3 ">
+        don't open..X
+    </a>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const videos = document.querySelectorAll(".video");
+
+        videos.forEach((video) => {
+          // Play video on hover
+          video.addEventListener("mouseenter", function () {
+            this.play();
+          });
+
+          // Pause video when not hovered
+          video.addEventListener("mouseleave", function () {
+            this.pause();
+            this.currentTime = 0;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
